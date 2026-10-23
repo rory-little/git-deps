@@ -9,7 +9,7 @@
 """
 
 import sys
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 def setup_package():
@@ -21,7 +21,8 @@ def setup_package():
         ] + sphinx,
         long_description='README.md',
         long_description_content_type="text/markdown",
-        use_pyscaffold=True
+        use_pyscaffold=True,
+        packages=find_packages()
     )
 
 
