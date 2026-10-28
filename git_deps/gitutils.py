@@ -81,7 +81,7 @@ class GitUtils(object):
 
     @classmethod
     def rev_list(cls, rev_range):
-        cmd = ['git', 'rev-list', rev_range]
+        cmd = ['git', 'rev-list', '--no-walk', rev_range]
         return subprocess.check_output(cmd, universal_newlines=True) \
                          .strip().split('\n')
 
